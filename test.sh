@@ -12,6 +12,5 @@ do
   echo $? >rc
   fulldir=$dir/2
 done
-echo ok
 diff -r $dir/2 $dir/1
 

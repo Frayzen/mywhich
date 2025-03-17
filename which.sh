@@ -5,10 +5,16 @@ set -e
 first=true
 allmatch=false
 
-while getopts a name
+while getopts ":a" curopt
 do
-  case $name in
+  case $curopt in
     a) allmatch=true
+       ;;
+    ?) 
+      echo "which: unknown option -- ${OPTARG}" 1>&2
+      echo "usage: which [-a] name ..." 1>&2
+      exit 1
+      ;;
   esac
 done
 shift $(($OPTIND - 1))
