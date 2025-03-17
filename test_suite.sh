@@ -8,6 +8,9 @@ test_cmd()
   ./test.sh "$@"
 }
 
+test_cmd
+test_cmd -a
+test_cmd -a -a
 test_cmd git
 test_cmd nvim
 test_cmd -a nvim bidule
