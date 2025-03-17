@@ -35,7 +35,7 @@ for arg in "$@"; do
     fi
   done
   if ! $found; then
-    echo "/usr/bin/which: no $arg in ($PATH)" 1>&2
+    echo "which: $arg: Command not found." 1>&2
     all=false
   fi
   if $found; then
